@@ -1,7 +1,7 @@
-<div class="container col-12 col-md-8 my-5 mx-auto">
+<div id="profile" class="container col-12 col-md-8 my-5 mx-auto">
   <div class="row">
     <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
-      <img src="./assets/profile.jpeg" alt="Profile image" class="rounded-circle img-fluid" style="max-width: 350px;">
+      <img src="./assets/profile.jpeg" alt="Profile image" class="rounded-circle img-fluid profile-pic">
     </div>
     <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
       <p class="fs-5">Hello, I'm</p>
@@ -16,12 +16,8 @@
         </button>
       </div>
       <div class="d-flex justify-content-center mt-3">
-        <a class="socials me-2 text-decoration-none" href="https://www.linkedin.com/in/sebastiano-fazzino-895862176/" target="_blank" >
-          <i class="fab fa-linkedin fa-3x icon mx-1"></i>
-        </a>
-        <a class="socials text-decoration-none" href="https://github.com/SebastianoFazzino" target="_blank" >
-          <i class="fab fa-github fa-3x icon mx-1"></i>
-        </a>
+        <i class="fab fa-linkedin fa-3x icon mx-2 pointer" (click)="goToLinkedin()"></i>
+        <i class="fab fa-github fa-3x icon mx-2 pointer" (click)="goToGithub()"></i>
       </div>
     </div>
   </div>

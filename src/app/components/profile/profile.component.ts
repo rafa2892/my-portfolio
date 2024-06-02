@@ -19,4 +19,12 @@ export class ProfileComponent {
   openResume() {
     window.open("./assets/SebastianoFazzino.pdf");
   }
+
+  goToLinkedin() {
+    window.open('https://www.linkedin.com/in/sebastiano-fazzino-895862176/', '_blank');
+  }
+
+  goToGithub() {
+    window.open('https://github.com/SebastianoFazzino', '_blank');
+  }
 }
