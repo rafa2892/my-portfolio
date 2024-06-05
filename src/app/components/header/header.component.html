@@ -8,13 +8,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-
-            @for (item of navItems; track item) {
-              <li class="nav-item px-3 fs-4">
-                <a class="nav-link" [href]="'#' + item" (click)="scrollTo(item.toLowerCase())" >{{ item }}</a>
-              </li>
-            }
-
+            <app-nav-links />
           </ul>
         </div>
       </div>

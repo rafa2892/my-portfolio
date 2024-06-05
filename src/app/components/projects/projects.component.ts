@@ -37,7 +37,7 @@ export class ProjectsComponent {
       description: 'Feel free to check out the code for my portfolio on Github. It\'s open for exploration, and you\'re welcome to fork it and create your own version!',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
       icon: 'fa fa-project-diagram icon',
-      link: 'https://github.com/SebastianoFazzino/portfolio',
+      link: 'https://github.com/SebastianoFazzino/my-portfolio',
     },
     {
       name: 'Banking App Decision Engine',
