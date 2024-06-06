@@ -1,4 +1,4 @@
-<section id="projects" class="col-12 col-md-8 col-xl-8 mx-auto">
+<section id="projects" class="col-10 col-md-8 col-xl-8 mx-auto">
   <p class="fs-5 text-center">Browse my recent</p>
   <h1 class="fw-bold text-center mb-5">Projects</h1>
   <div class="accordion" id="accordionExample">
@@ -9,7 +9,8 @@
                 [attr.data-bs-target]="'#collapse' + i" aria-expanded="true"
                 [attr.aria-controls]="'collapse' + i"
                 (click)="setAccordionIndex(i)">
-          <h4 class="my-2" [ngClass]="{'project-name-open': i === openAccordionIndex}">{{ project.name }}</h4>
+          <h4 class="my-2" [ngClass]="{'project-name-open': i === openAccordionIndex}">
+            {{ project.name }}</h4>
         </button>
       </h2>
       <div [id]="'collapse' + i" class="accordion-collapse collapse"

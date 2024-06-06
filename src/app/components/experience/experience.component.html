@@ -6,25 +6,25 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-xl-6">
+    <div class="col-10 col-xl-6 mx-auto">
       <div class="card m-2 rounded-5 border-black">
         <h2 class="experience-subtitle text-center">Backend Development</h2>
         <div class="row">
             @for (item of backendExperienceItems; track item) {
               <div class="col-6">
-                <app-experience-item [item]="item.key" [level]="item.value"></app-experience-item>
+                <app-experience-item [item]="item.key" [level]="item.value" />
               </div>
             }
         </div>
       </div>
     </div>
-    <div class="col-12 col-xl-6">
+    <div class="col-10 col-xl-6 mx-auto">
       <div class="card m-2 rounded-5 border-black">
         <h2 class="experience-subtitle text-center">Frontend Development</h2>
         <div class="row">
             @for (item of frontendExperienceItems; track item) {
               <div class="col-6">
-                <app-experience-item [item]="item.key" [level]="item.value"></app-experience-item>
+                <app-experience-item [item]="item.key" [level]="item.value" />
               </div>
             }
         </div>
