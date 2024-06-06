@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ExperienceItemComponent} from "../experience/experience-item/experience-item.component";
 
 @Component({

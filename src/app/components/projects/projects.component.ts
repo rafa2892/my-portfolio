@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NgClass, NgForOf, ViewportScroller} from "@angular/common";
 import {ProjectItemComponent} from "./project-item/project-item.component";
 

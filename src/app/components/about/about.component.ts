@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {ViewportScroller} from "@angular/common";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -9,12 +8,6 @@ import {ViewportScroller} from "@angular/common";
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-
-  constructor(private viewportScroller: ViewportScroller) {}
-
-  scrollTo(section: string) {
-    this.viewportScroller.scrollToAnchor(section);
-  }
 
   getExperienceYears(): number {
     const startDate = new Date(2021, 3); // April 2021

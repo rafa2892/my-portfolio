@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {ViewportScroller} from "@angular/common";
+import {Component} from '@angular/core';
 import {ExperienceItemComponent} from "./experience-item/experience-item.component";
 
 @Component({
@@ -12,8 +11,6 @@ import {ExperienceItemComponent} from "./experience-item/experience-item.compone
   styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
-
-  constructor(private viewportScroller: ViewportScroller) {}
 
   protected backendExperienceItems: {key: string, value: string}[] = [
     {key: "Java", value: "Experienced"},
@@ -32,7 +29,4 @@ export class ExperienceComponent {
     {key: "React", value: "Basic"},
   ];
 
-  scrollTo(section: string) {
-    this.viewportScroller.scrollToAnchor(section);
-  }
 }

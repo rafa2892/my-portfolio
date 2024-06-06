@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NavLinksComponent} from "../shared/nav-links/nav-links.component";
 
 @Component({
