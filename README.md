@@ -1,27 +1,75 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+## Overview
+This project is built with Angular 18, using SCSS and Bootstrap for styling. It is open-source, and anyone is welcome to clone and modify it.
 
-## Development server
+## Cloning the Repository
+To clone the repository with a shallow copy to reduce the size of the clone, use the following command:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+git clone --depth 1 https://github.com/SebastianoFazzino/my-portfolio.git
+```
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After cloning the repository, navigate to the project directory and install the necessary dependencies:
 
-## Build
+```bash
+cd my-portfolio
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Running the Application
 
-## Running unit tests
+To run the application, use the following command:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ng serve
+```
 
-## Running end-to-end tests
+The application will be available at `http://localhost:4200/`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Deploying to GitHub Pages
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The deployment to GitHub Pages is automated using a GitHub Action. Here is the configuration for the action:
+
+```yaml
+name: Angular Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build Angular app to prod
+        working-directory: .
+        run: npm install && npm run build:prod
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/browser
+          branch: deploy
+          token: ${{ secrets.TOKEN }}
+```
+
+## Steps to Enable Deployment
+
+- Generate a GitHub Token: Generate a personal access token on GitHub with repo and public_repo permissions.
+- Add the Token to Repository Secrets: Save the generated token as a secret in your GitHub repository. Navigate to the repository settings, then to "Secrets and variables" under the "Security" section, and add a new repository secret named TOKEN.
+- Push to Master: Whenever changes are pushed to the master branch, the GitHub Action will trigger. It will build the Angular project and deploy it to the deploy branch, which will be used for GitHub Pages.
+
+Once the action is triggered, GitHub Pages will serve the content from the deploy branch, making your application accessible via the GitHub Pages URL associated with your repository.
