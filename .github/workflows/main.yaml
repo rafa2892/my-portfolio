@@ -27,3 +27,11 @@ jobs:
           folder: dist/browser
           branch: deploy
           token: ${{ secrets.TOKEN }}
+          
+      - name: Delete old workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ secrets.TOKEN }}
+          repository: SebastianoFazzino/my-portofolio
+          retain_days: 10
+          keep_minimum_runs: 5
