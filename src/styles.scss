@@ -12,15 +12,14 @@ $decoration-color: rgb(181,181, 181);
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #F8F7F2;
-  //background: linear-gradient(to right, #FFFFFF, #FFFAF0);
+  background: #F8F7F2 linear-gradient(to right, #FFFFFF, #FFFAF0);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-p, .subtitle {
+p, li, .subtitle {
   color: rgb(85,85,85);
 }
 
@@ -68,6 +67,16 @@ i.pointer {
 
 .btn-color-2 {
   background: none;
+
+  &:hover {
+    background: $hover-background;
+    border-color: $whitesmoke-color;
+  }
+}
+
+.btn-color-3 {
+  background: $black-color;
+  color: whitesmoke;
 
   &:hover {
     background: $hover-background;

@@ -12,10 +12,11 @@ export class NavLinksComponent {
 
   constructor(private viewportScroller: ViewportScroller) {}
 
-  protected  navItems: string[] = ['About', 'Experience', 'Projects', 'Contacts'];
+  protected  navItems: string[] = ['About', 'Skill Set', 'Projects', 'Contacts'];
 
   scrollTo(section: string) {
-    this.viewportScroller.scrollToAnchor(section);
+    let elementId = section.toLowerCase().replace(' ', '-');
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
 }
