@@ -1,83 +1,51 @@
-import {AfterViewInit, Component, ElementRef, QueryList, ViewChildren} from '@angular/core';
-import {NgForOf} from "@angular/common";
+import {Component} from '@angular/core';
+import {NgOptimizedImage} from "@angular/common";
+
+interface ExperienceItem {
+  name: string;
+  src: string;
+  index?: number;
+}
 
 @Component({
   selector: 'app-experience',
   standalone: true,
   templateUrl: './experience.component.html',
   imports: [
-    NgForOf
+    NgOptimizedImage
   ],
   styleUrl: './experience.component.scss'
 })
-export class ExperienceComponent implements AfterViewInit {
+export class ExperienceComponent {
 
-  private backendExperienceItems: { key: string, value: string }[] = [
-    {key: "Java", value: "Experienced"},
-    {key: "Spring Boot", value: "Experienced"},
-    {key: "Kafka", value: "Experienced"},
-    {key: "MySQL", value: "Experienced"},
-    {key: "PostgreSQL", value: "Experienced"},
-    {key: "Kubernetes", value: "Intermediate"},
-    {key: "GIT", value: "Experienced"},
+  private experienceItems: ExperienceItem[] = [
+    {name: "Java", src: "./assets/technologies/java.png"},
+    {name: "Spring Boot", src: "./assets/technologies/spring-boot.png"},
+    {name: "Kafka", src: "./assets/technologies/kafka.png"},
+    {name: "MySQL", src: "./assets/technologies/mysql.png"},
+    {name: "PostgreSQL", src: "./assets/technologies/postgresql.png"},
+    {name: "Redis", src: "./assets/technologies/redis.png"},
+    {name: "Javascript", src: "./assets/technologies/js.png"},
+    {name: "Typescript", src: "./assets/technologies/ts.png"},
+    {name: "Angular", src: "./assets/technologies/angular.png"},
+    {name: "React", src: "./assets/technologies/react.png"},
+    {name: "Next.js", src: "./assets/technologies/next.png"},
+    {name: "HTML", src: "./assets/technologies/html.png"},
+    {name: "CSS", src: "./assets/technologies/css.png"},
+    {name: "Bootstrap", src: "./assets/technologies/bootstrap.png"},
+    {name: "Kubernetes", src: "./assets/technologies/kubernetes.png"},
+    {name: "Docker", src: "./assets/technologies/docker.png"},
+    {name: "GCP", src: "./assets/technologies/gcp.png"},
+    {name: "GIT", src: "./assets/technologies/git.png"},
   ];
 
-  private frontendExperienceItems: { key: string, value: string }[] = [
-    {key: "Angular", value: "Intermediate"},
-    {key: "React", value: "Basic"},
-    {key: "Next.js", value: "Basic"},
-    {key: "Javascript", value: "Intermediate"},
-    {key: "Typescript", value: "Intermediate"},
-    {key: "HTML", value: "Intermediate"},
-    {key: "CSS", value: "Intermediate"},
-    {key: "Bootstrap", value: "Intermediate"},
-  ];
-
-  get backendExperience(): { key: string, value: string }[] {
-    return this.backendExperienceItems
-      .concat(this.backendExperienceItems)
-      .concat(this.backendExperienceItems)
-      .concat(this.backendExperienceItems)
-      .concat(this.backendExperienceItems)
-      .concat(this.backendExperienceItems);
+  // needed to create an infinite-like scroll effect
+  get getExperience(): ExperienceItem[] {
+    return Array.from({ length: 10 }, (_, i: number) =>
+      this.experienceItems.map((item: ExperienceItem, index: number) => ({
+        ...item, index: i * this.experienceItems.length + index
+      }))
+    ).flat();
   }
 
-  public infiniteList: {key: string, value: string}[] = [...this.frontendExperienceItems];
-  public currentIndex: number = 0;
-
-  @ViewChildren('carouselItem', { read: ElementRef }) carouselItems!: QueryList<ElementRef>;
-
-  ngAfterViewInit(): void {
-    this.carouselItems.changes.subscribe(() => {
-      this.updateVisibleItems();
-    });
-    this.updateVisibleItems();
-  }
-
-  private updateVisibleItems(): void {
-    this.carouselItems.forEach((item, index) => {
-      if (this.isElementInViewport(item.nativeElement)) {
-        this.currentIndex = index;
-        this.checkAndExtendList();
-      }
-    });
-  }
-
-  private isElementInViewport(el: any): boolean {
-    const rect = el.getBoundingClientRect();
-    return rect.left >= 0 && rect.right <=
-      (window.innerWidth || document.documentElement.clientWidth);
-  }
-
-  private checkAndExtendList(): void {
-    const threshold = Math.floor(this.infiniteList.length * 0.90);
-    if (this.currentIndex >= threshold) {
-      this.infiniteList = [...this.infiniteList, ...this.frontendExperienceItems];
-    }
-  }
-
-  // Unique key for tracking by Angular
-  trackByFn(index: number, item: { key: string, value: string }): string {
-    return item.key;
-  }
 }

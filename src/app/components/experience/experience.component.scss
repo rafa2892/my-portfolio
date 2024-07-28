@@ -7,19 +7,9 @@
   }
 }
 
-@keyframes slide-reverse {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
 .experience-items {
   overflow: hidden;
   padding: 60px 0;
-  background: white;
   white-space: nowrap;
   position: relative;
 }
@@ -36,31 +26,20 @@
 
 .experience-items:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
 }
 
 .experience-items:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
-
-.experience-items:hover .experience-slide,
-.experience-items:hover .experience-slide-reverse {
-  animation-play-state: paused;
 }
 
 .experience-slide {
   display: inline-block;
-  animation: 35s slide infinite linear;
+  animation: 300s slide infinite linear;
 }
 
-.experience-slide-reverse {
-  display: inline-block;
-  animation: 35s slide-reverse infinite linear;
-}
-
-.experience-slide img,
-.experience-slide-reverse img {
-  height: 50px;
-  margin: 0 40px;
+// Override ngSrc attributes
+.item-img {
+  height: 80px !important;
+  width: auto !important;
+  margin: 0 40px !important;
 }
