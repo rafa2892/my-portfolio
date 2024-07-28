@@ -3,6 +3,18 @@
   <h1 class="fw-bold text-center mb-5">Projects</h1>
 
   <div id="projectsCarousel" class="carousel carousel-dark slide my-5" data-bs-ride="carousel">
+
+    <div class="carousel-indicators my-3">
+      <button *ngFor="let _ of projects; let i = index"
+              type="button"
+              [attr.data-bs-target]="'#projectsCarousel'"
+              [attr.data-bs-slide-to]="i"
+              [ngClass]="{'active': i === 0}"
+              [attr.aria-current]="i === 0 ? 'true' : null"
+              [attr.aria-label]="'Slide ' + (i + 1)">
+      </button>
+    </div>
+
     <div class="carousel-inner">
       <div *ngFor="let project of projects; let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}">
         <app-project-item [project]="project"></app-project-item>
