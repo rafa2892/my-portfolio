@@ -1,34 +1,66 @@
-.checkmark {
-  height: 1rem;
-
-  @media (max-width: 1000px) {
-    height: 0.8rem;
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 
-.level {
-  margin-left: 1.2rem;
-  font-size: 0.8rem;
-
-  @media (max-width: 1000px) {
-    margin-left: 0.8rem;
+@keyframes slide-reverse {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
   }
 }
 
-.item {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-
-  @media (max-width: 1000px) {
-    font-size: 1.1rem;
-  }
+.experience-items {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
 }
 
-.experience-subtitle {
-   color: rgb(85, 85, 85);
-   font-weight: 600;
-   font-size: 1.75rem;
-   margin: 2rem 0;
- }
+.experience-items:before,
+.experience-items:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
 
+.experience-items:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.experience-items:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.experience-items:hover .experience-slide,
+.experience-items:hover .experience-slide-reverse {
+  animation-play-state: paused;
+}
+
+.experience-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.experience-slide-reverse {
+  display: inline-block;
+  animation: 35s slide-reverse infinite linear;
+}
+
+.experience-slide img,
+.experience-slide-reverse img {
+  height: 50px;
+  margin: 0 40px;
+}

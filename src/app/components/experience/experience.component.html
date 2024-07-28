@@ -5,30 +5,83 @@
       <h1 class="text-center fw-bold mb-5">Experience</h1>
     </div>
   </div>
-  <div class="row">
-    <div class="col-10 col-xl-6 mx-auto">
-      <div class="card m-2 rounded-5 border-black">
-        <h2 class="experience-subtitle text-center">Backend Development</h2>
-        <div class="row">
-            @for (item of backendExperienceItems; track item) {
-              <div class="col-6">
-                <app-experience-item [item]="item.key" [level]="item.value" />
-              </div>
-            }
-        </div>
-      </div>
+<!--  <div class="row">-->
+<!--    <div class="col-10 col-xl-6 mx-auto">-->
+<!--      <div class="card m-2 rounded-5 border-black">-->
+<!--        <h2 class="experience-subtitle text-center">Backend Development</h2>-->
+<!--        <div class="row">-->
+<!--            @for (item of backendExperienceItems; track item) {-->
+<!--              <div class="col-6">-->
+<!--                <app-experience-item [item]="item.key" [level]="item.value" />-->
+<!--              </div>-->
+<!--            }-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-10 col-xl-6 mx-auto">-->
+<!--      <div class="card m-2 rounded-5 border-black">-->
+<!--        <h2 class="experience-subtitle text-center">Frontend Development</h2>-->
+<!--        <div class="row">-->
+<!--            @for (item of frontendExperienceItems; track item) {-->
+<!--              <div class="col-6">-->
+<!--                <app-experience-item [item]="item.key" [level]="item.value" />-->
+<!--              </div>-->
+<!--            }-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="experience-items">
+    <div class="experience-slide">
+      @for ( item of backendExperience; track item ) {
+        <img src="./assets/checkmark.png" alt="Experience checkmark" class="checkmark mr-3">
+      }
     </div>
-    <div class="col-10 col-xl-6 mx-auto">
-      <div class="card m-2 rounded-5 border-black">
-        <h2 class="experience-subtitle text-center">Frontend Development</h2>
-        <div class="row">
-            @for (item of frontendExperienceItems; track item) {
-              <div class="col-6">
-                <app-experience-item [item]="item.key" [level]="item.value" />
-              </div>
-            }
+  </div>
+
+<!--  <div class="experience-items">-->
+<!--    <div class="experience-slide-reverse">-->
+<!--      @for (item of frontendExperience; track item) {-->
+<!--        <img src="./assets/checkmark.png" alt="Experience checkmark" class="checkmark mr-3">-->
+<!--      }-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="experience-items">
+    <div class="experience-slide-reverse">
+      <div class="carousel-wrapper">
+        <div *ngFor="let item of infiniteList; let i = index; trackBy: trackByFn" #carouselItem class="carousel-item">
+          <img src="./assets/checkmark.png" alt="Experience checkmark" class="checkmark mr-3">
+          <span>{{ item.key }} - {{ item.value }}</span>
         </div>
       </div>
     </div>
   </div>
+
+<!--    <div class="experience-slide">-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--    </div>-->
+
+<!--    <div class="experience-slide">-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--      <img src="./assets/profile.jpeg" />-->
+<!--    </div>-->
+
+
 </section>
