@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 // Define la ruta a la carpeta 'dist/gestion-contador-frontend-no-standalone/browser'
-const distPath = path.join(__dirname, 'dist', 'mi-portfolio', 'browser');
+const distPath = path.join(__dirname, 'dist', 'browser');
 
 // Sirve los archivos estáticos desde la carpeta 'browser'
 app.use(express.static(distPath));
