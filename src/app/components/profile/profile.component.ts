@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ViewportScroller} from "@angular/common";
+import { PortfolioServiceService } from '../services/portfolio-service.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +11,8 @@ import {ViewportScroller} from "@angular/common";
 })
 export class ProfileComponent {
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(private viewportScroller: ViewportScroller,
+              private portService : PortfolioServiceService) {}
 
   scrollTo(section: string) {
     this.viewportScroller.scrollToAnchor(section);
@@ -27,4 +29,12 @@ export class ProfileComponent {
   goToGithub() {
     window.open('https://github.com/SebastianoFazzino', '_blank');
   }
+
+  prueba() {
+    this.portService.pruebaConexion().subscribe({
+      next: () => console.log('Conexión exitosa'),
+      error: (error) => console.error('Error en la conexión:', error)
+    });
+  }
+  
 }

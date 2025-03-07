@@ -15,5 +15,5 @@ import {FooterComponent} from "./components/footer/footer.component";
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'mi-portfolio';
 }
