@@ -1,8 +1,29 @@
-.header-container {
-  height: 25vh;
-  max-width: 1800px;
+  $whitesmoke-color: whitesmoke;
+  $hover-background: rgb(53, 53, 53);
 
-  @media (max-width: 1000px) {
-    height: 33vh;
-  }
+  .header-container {
+    height: 25vh;
+    max-width: 1800px;
+
+    @media (max-width: 1000px) {
+      height: 33vh;
+    }
+
+    .lang-icon {
+      width: 24px;   /* Tamaño de la imagen */
+      height: 24px;
+      transition: transform 0.2s ease-in-out; /* Suaviza la animación */
+    }
+
+    button:hover .lang-icon {
+      transform: scale(1.4); /* Aumenta el tamaño */
+    }
+
+    .active-lang {
+      background: $hover-background;
+      border-color: $whitesmoke-color;
+      .lang-icon {
+        transform: scale(1.4); 
+      }
+    }
 }

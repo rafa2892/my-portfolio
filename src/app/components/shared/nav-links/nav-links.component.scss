@@ -1,11 +1,11 @@
 a {
-  color: black;
+  color: grey;
   text-decoration: none;
   text-decoration-color: whitesmoke;
   cursor: pointer;
 
   &:hover {
-    color: gray;
+    color: whitesmoke;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181,181, 181);

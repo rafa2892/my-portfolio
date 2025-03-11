@@ -1,8 +1,21 @@
-<div class="container-fluid header-container">
+<div class="container-fluid header-container mt-4">
+
+  <div class="row justify-content-end me-3">
+    <button class="bt btn-color-2 me-2 d-flex align-items-center gap-2" (click)="switchLanguage('es')" [ngClass]="{'active-lang': currentLang === 'es'}" >
+      <p class="fs-5 mb-0">{{ 'LANG_ES' | translate }}</p>
+      <img src="assets/icons/spain_flag_icon.png" alt="Español" class="lang-icon me-2">
+    </button>
+    <button class="bt btn-color-2 me-2 d-flex align-items-center gap-2" (click)="switchLanguage('en')"  [ngClass]="{'active-lang': currentLang === 'en'}">
+      <p class="fs-5 mb-0">{{ 'LANG_EN' | translate }}</p>
+      <img src="assets/icons/uk_flag_icon.png" alt="English" class="lang-icon me-2">
+    </button>
+  </div>
+
+
   <div class="row">
     <nav class="navbar navbar-expand-lg col-md-8 mx-auto my-5 col-12">
       <div class="container-fluid">
-        <span class="navbar-brand fs-2">Sebastiano</span>
+        <span class="navbar-brand fs-2">Rafael Moreno</span>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

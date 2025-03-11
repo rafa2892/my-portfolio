@@ -3,24 +3,28 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 
-$black-color: black;
+$black-color: rgb(117, 111, 111);
 $whitesmoke-color: whitesmoke;
 $border-color: rgb(53, 53, 53);
 $darkgrey-color: rgb(85, 85, 85);
 $hover-background: rgb(53, 53, 53);
 $decoration-color: rgb(181,181, 181);
 
+
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: #F8F7F2 linear-gradient(to right, #FFFFFF, #FFFAF0);
+  background: linear-gradient(to right, #3E2A1A, #2B1D0E);
+  color: white; 
 }
+
 
 html {
   scroll-behavior: smooth;
 }
 
 p, li, .subtitle {
-  color: rgb(85,85,85);
+  color: whitesmoke;
 }
 
 section {
@@ -36,8 +40,31 @@ section {
   }
 }
 
+// .icon {
+//   color: $whitesmoke-color;
+// }
+
+/* Definir el color de los iconos */
 .icon {
-  color: $black-color;
+    color: $whitesmoke-color; /* Aplica el color de texto definido */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Suaviza la transición */
+    padding: 10px; /* Añade algo de espacio alrededor */
+    border-radius: 50%; /* Hace el fondo redondeado */
+    background-color: transparent; /* Fondo inicial transparente */
+
+    &:hover {
+      color: #ffffff; /* Cambia el color del icono a blanco durante el hover */
+      transform: scale(1.5); /* Aumenta el tamaño */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra alrededor del icono */
+
+    &.fa-linkedin {
+      background-color: #0077b5; /* Azul LinkedIn */
+    }
+
+    &.fa-github {
+    background-color: #333; /* Gris oscuro GitHub */
+    }
+  }
 }
 
 i.pointer {
@@ -60,8 +87,9 @@ i.pointer {
 }
 
 .btn-color-1 {
+  background-color: $black-color;
   &:hover {
-    background: $black-color;
+    border-color: $whitesmoke-color;
   }
 }
 
@@ -83,3 +111,7 @@ i.pointer {
     border-color: $whitesmoke-color;
   }
 }
+
+.fs-2 {
+  color: whitesmoke;
+} 
