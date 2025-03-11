@@ -9,5 +9,25 @@
     "LINKEDIN": "LinkedIn",
     "DOWNLOAD_RESUME": "Download Resume",
     "SUCCESSFUL_CONNECTION": "Successful connection",
-    "CONNECTION_ERROR": "Connection error"
+    "CONNECTION_ERROR": "Connection error",
+
+    "NAV": {
+        "ABOUT": "About",
+        "SKILL_SET": "Skill Set",
+        "PROJECTS": "Projects",
+        "CONTACTS": "Contacts"
+      },
+
+    "ABOUT_MORE":"Get to know more",
+    "ABOUT_ME":"About Me",
+    "EXPERIENCE":"Experience",
+    "SPECIALIZATION":"Specialized In",
+    "EXPLORE_MY":"Explore My",
+    "SKILL_SET":"Skill Set",
+    "BROWSE":"Browse my recent",
+    "PROJECTS":"Projects"
+
+
+
+
 }

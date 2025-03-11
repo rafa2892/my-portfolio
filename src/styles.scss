@@ -16,6 +16,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right, #3E2A1A, #2B1D0E);
   color: white; 
+  caret-color: transparent;
 }
 
 
@@ -40,31 +41,38 @@ section {
   }
 }
 
-// .icon {
-//   color: $whitesmoke-color;
-// }
-
-/* Definir el color de los iconos */
 .icon {
-    color: $whitesmoke-color; /* Aplica el color de texto definido */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Suaviza la transición */
-    padding: 10px; /* Añade algo de espacio alrededor */
-    border-radius: 50%; /* Hace el fondo redondeado */
-    background-color: transparent; /* Fondo inicial transparente */
+    color: $whitesmoke-color; 
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
 
     &:hover {
-      color: #ffffff; /* Cambia el color del icono a blanco durante el hover */
-      transform: scale(1.5); /* Aumenta el tamaño */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra alrededor del icono */
+      color: #ffffff; 
+      transform: scale(1.5); 
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 
     &.fa-linkedin {
-      background-color: #0077b5; /* Azul LinkedIn */
+      background-color: #0077b5; /* blue LinkedIn */
     }
 
     &.fa-github {
-    background-color: #333; /* Gris oscuro GitHub */
+    background-color: #333; /* Dark Grey GitHub */
     }
   }
+}
+
+.fa-linkedin {
+  background-color: #0077b5; /* blue LinkedIn */
+}
+
+.icon-email {
+  color: #DB4437; /* Rojo */
+}
+
+.icon-email:hover {
+  color: #0F9D58;
 }
 
 i.pointer {
@@ -115,3 +123,7 @@ i.pointer {
 .fs-2 {
   color: whitesmoke;
 } 
+
+.rs-icon {
+  font-size: 1.5rem; /* Tamaño más pequeño */
+}

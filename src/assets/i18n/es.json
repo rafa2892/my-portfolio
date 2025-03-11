@@ -9,5 +9,22 @@
     "LINKEDIN": "LinkedIn",
     "DOWNLOAD_RESUME": "Descargar CV",
     "SUCCESSFUL_CONNECTION": "Conexión exitosa",
-    "CONNECTION_ERROR": "Error en la conexión"
+    "CONNECTION_ERROR": "Error en la conexión",
+
+    "NAV": {
+      "ABOUT": "Sobre mi",
+      "SKILL_SET": "Habilidades",
+      "PROJECTS": "Proyectos",
+      "CONTACTS": "Contactos"
+    },
+
+    "ABOUT_MORE":"Más",
+    "ABOUT_ME":"Sobre mí",
+    "EXPERIENCE":"Experiencia",
+    "SPECIALIZATION":"Especializado en",
+    "EXPLORE_MY":"Explora Mis",
+    "SKILL_SET":"Habilidades",
+    "BROWSE":"Explora mis recientes",
+    "PROJECTS":"Proyectos"
+
   }

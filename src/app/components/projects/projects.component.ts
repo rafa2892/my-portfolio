@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NgClass, NgForOf} from "@angular/common";
 import {ProjectItemComponent} from "./project-item/project-item.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 export interface Project {
   name: string;
@@ -16,7 +17,8 @@ export interface Project {
   imports: [
     ProjectItemComponent,
     NgForOf,
-    NgClass
+    NgClass,
+    TranslateModule
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
