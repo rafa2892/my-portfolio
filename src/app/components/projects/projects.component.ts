@@ -9,7 +9,7 @@ export interface Project {
   technologies: string[];
   src: string;
   link: string;
-  ischeckable:boolean;
+  isCheckable:boolean;
   appUrl:string;
 }
 
@@ -34,7 +34,7 @@ export class ProjectsComponent {
       technologies: ['Java 8', 'JSF', 'Spring Framework', 'HTML', 'CSS', 'Bootstrap', 'JPA', 'IBM WebSphere'],
       src: './assets/projects/SEPE.jpg',
       link: '',
-      ischeckable: false,
+      isCheckable: false,
       appUrl:'',
     },
     {
@@ -43,7 +43,7 @@ export class ProjectsComponent {
       technologies: ['Java 8', 'Spring Boot', 'Spring Batch', 'Angular', 'TypeScript', 'Oracle Data base', 'Postman'],
       src: './assets/projects/madrid-digital.png',
       link: '',
-      ischeckable: false,
+      isCheckable: false,
       appUrl:'',
     },
     {
@@ -52,7 +52,7 @@ export class ProjectsComponent {
       technologies: ["Java 17", "Spring boot", 'Angular', 'TypeScript','Bootstrap 5', 'JWT', 'Google API places', 'MySQL'],
       src: './assets/projects/bus_app_img.png',
       link: 'https://github.com/rafa2892/bus-app-front-deploy-version',
-      ischeckable: true,
+      isCheckable: true,
       appUrl:'https://bus-app-front-6b508bec4929.herokuapp.com',
     },
     {
@@ -61,7 +61,7 @@ export class ProjectsComponent {
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Bootstrap'],
       src: './assets/projects/portfolio.jpg',
       link: 'https://github.com/SebastianoFazzino/my-portfolio',
-      ischeckable: true,
+      isCheckable: true,
       appUrl:'https://mi-portfolio-3492a933c6d9.herokuapp.com',
     },
     {
@@ -70,7 +70,7 @@ export class ProjectsComponent {
       technologies: ['Java 17','Java', 'Spring Boot', 'Postman'],
       src: './assets/projects/multi_core.png',
       link: 'https://github.com/SebastianoFazzino/banking-app',
-      ischeckable: false,
+      isCheckable: false,
       appUrl:'',
     },
   ];
