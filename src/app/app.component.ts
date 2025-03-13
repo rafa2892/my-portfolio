@@ -29,9 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
 export class AppComponent {
 
   constructor(private translate: TranslateService) {
-    const savedLang = localStorage.getItem('lang') || 'en'; // Cargar desde localStorage o usar inglés por defecto
-    this.translate.setDefaultLang('en'); // Establecer inglés como idioma por defecto
-    this.translate.use(savedLang); // Usar el idioma guardado o el predeterminado
+    const savedLang = localStorage.getItem('lang') || 'en'; 
+    this.translate.setDefaultLang('en'); 
+    this.translate.use(savedLang); 
   }
   title = 'mi-portfolio';
 }

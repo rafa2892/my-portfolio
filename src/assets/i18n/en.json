@@ -25,7 +25,33 @@
     "EXPLORE_MY":"Explore My",
     "SKILL_SET":"Skill Set",
     "BROWSE":"Browse my recent",
-    "PROJECTS":"Projects"
+    "PROJECTS":"Projects & Experiences",
+
+    "EXPERIENCE_YEARS": "{{years}}+ years of experience",
+    "EXPERIENCE_DESCRIPTION": "in Software Development",
+    "EXPERIENCE_FOCUS": "with a focus on the Backend side",
+
+    "SKILLS_WEB_DEV": "Web Application Development",
+    "SKILLS_MICROSERVICES": "Microservices Architecture",
+    "SKILLS_DATABASES": "Relational Databases",
+    "SKILLS_MVC": "MVC Architecture",
+
+    "ABOUT_ME_DESCRIPTION": 
+    "I’m Rafael Moreno, a backend developer based in Spain with over 3 years of diverse experience. I specialize in crafting robust Java-based solutions with Spring and Spring Boot, aligning technical objectives with user needs, and exploring new and exciting technologies like Angular. My passion lies in tackling diverse challenges in the dynamic tech landscape, leveraging my experience while seeking to further expand my international exposure in collaborative environments."
+    ,
+
+    "PROJECTS_DESC": {
+    "SEPE_DESC": "I was part of the development team at the autonomous organization SEPE, helping create an application from scratch, based on the defined architecture. The app is designed to assess the impact of the measures implemented for gender mainstreaming.",
+    "MADRID_DIGITAL_DESC": "As part of the development team for Madrid Digital, my responsibilities included tasks such as migrating applications from JSF Core to PrimeFaces, developing batch processes with Spring Batch, creating APIs, as well as managing deployments through Jenkins (CI/CD). Additionally, I participated in the maintenance and optimization of applications based on a microservices architecture containerized with Docker, among other tasks.",
+    "TRANSPORT_BUS_DESC": "Web application for managing a transportation system that records the services performed by units and handles vehicle maintenance, among other functions. It facilitates efficient system administration, ensuring optimal control of resources and services.",
+    "PORTFOLIO_DESC": "Feel free to check out the code for my portfolio on GitHub. It's open for exploration, and you're welcome to fork it and create your own version!",
+    "MULTICORE_DESC": "Technical test approved to demonstrate my skills in multithread programming, applied to the development of software for electronic devices."
+  },
+
+    "TECNOLOGIES_USED": "Technologies used",
+    "GIVE_TRY":"Give it a try!",
+    "CHECK_GITHUB":"Check on Github"
+  
 
 
 

@@ -25,6 +25,31 @@
     "EXPLORE_MY":"Explora Mis",
     "SKILL_SET":"Habilidades",
     "BROWSE":"Explora mis recientes",
-    "PROJECTS":"Proyectos"
+    "PROJECTS":"Proyectos y Experiencias",
+
+    "EXPERIENCE_YEARS": "{{years}}+ años de experiencia",
+    "EXPERIENCE_DESCRIPTION": "en Desarrollo de Software",
+    "EXPERIENCE_FOCUS": "con enfoque en el Backend",
+
+    "SKILLS_WEB_DEV": "Desarrollo de Aplicaciones Web",
+    "SKILLS_MICROSERVICES": "Arquitectura de Microservicios",
+    "SKILLS_DATABASES": "Bases de Datos Relacionales",
+    "SKILLS_MVC": "Arquitectura MVC",
+
+    "ABOUT_ME_DESCRIPTION": "Soy Rafael Moreno, un desarrollador backend radicado en España con más de 3 años de experiencia diversa. Me especializo en crear soluciones robustas basadas en Java con Spring y Spring Boot, alineando objetivos técnicos con las necesidades de los usuarios y explorando nuevas y emocionantes tecnologías como Angular. Mi pasión radica en enfrentar desafíos diversos en el dinámico panorama tecnológico, aprovechando mi experiencia y buscando expandir aún más mi proyección internacional en entornos colaborativos."
+    ,
+
+    "PROJECTS_DESC": {
+      "SEPE_DESC": "Formé parte del equipo de desarrollo del organismo autónomo SEPE, contribuyendo a la creación de una aplicación desde su inicio, basada en la arquitectura definida. Esta aplicación fue diseñada para evaluar el impacto de las medidas implementadas en el marco de la transversalización de género.",
+      "MADRID_DIGITAL_DESC": "Como parte del equipo de desarrollo para madrid digital, mis responsabilidades abarcaron tareas como la migración de aplicaciones de JSF Core a PrimeFaces, el desarrollo de procesos batch con Spring Batch, la creación de APIs, así como la gestión de despliegues mediante Jenkins (CI/CD). Además, participé en el mantenimiento y la optimización de aplicaciones basadas en una arquitectura de microservicios containerizados con Docker, entre otras tareas.",
+      "TRANSPORT_BUS_DESC": "Aplicación web para la gestión de un sistema de transporte que registra los servicios realizados por las unidades y gestiona el mantenimiento de vehículos, entre otras funciones. Facilita la administración eficiente del sistema, asegurando un control óptimo de recursos y servicios.",
+      "PORTFOLIO_DESC": "Consulta el código de mi portafolio en GitHub. Está abierto a la exploración y puedes bifurcarlo para crear tu propia versión.",
+      "MULTICORE_DESC": "Prueba técnica aprobada para demostrar mis habilidades en la programación multihilo, aplicada al desarrollo de software para equipos electrónicos."
+    },
+
+    "TECNOLOGIES_USED": "Tecnologías usadas",
+    "GIVE_TRY":"¡Pruéba!",
+    "CHECK_GITHUB":"Ver en Github"
+    
 
   }

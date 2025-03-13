@@ -33,6 +33,7 @@ export class ExperienceComponent {
     {name: "Kubernetes", src: "./assets/technologies/kubernetes.png"},
     {name: "Docker", src: "./assets/technologies/docker.png"},
     {name: "GIT", src: "./assets/technologies/git.png"},
+    {name: "Postman", src: "./assets/technologies/postman.png"},
   ];
 
   // needed to create an infinite-like scroll effect

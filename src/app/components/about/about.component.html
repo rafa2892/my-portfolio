@@ -3,43 +3,40 @@
   <h1 class="fw-bold text-center">{{'ABOUT_ME' | translate}}</h1>
   <div class="row mt-4">
     <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
-      <img class="about-pic img-fluid rounded-5" src="./assets/about-me.jpg" alt="RM's about image" >
+      <img class="about-pic img-fluid rounded-5" src="./assets/landscape.jpg" alt="RM's about image" >
     </div>
     <div class="col-12 col-lg-8 d-flex flex-column justify-content-center align-items-center">
       <div class="row w-100">
         <div class="col-12 col-md-6 d-flex justify-content-center mb-3">
-          <div class="about-card card w-100 border-black">
+          <div class="about-card card w-100 border-white">
             <div class="card-body text-center">
               <i class="fa fa-award fa-2x icon"></i>
               <h3 class="fw-bold about-subtitle">{{'EXPERIENCE' | translate}}</h3>
               <p class="card-text">
-                {{ getExperienceYears() }}+ years of experience
-                <br>in Software Development with
-                <br>a focus on the Backend side
+                {{ 'EXPERIENCE_YEARS' | translate:{ years: getExperienceYears() } }}
+                <br> {{ 'EXPERIENCE_DESCRIPTION' | translate }}
+                <br> {{ 'EXPERIENCE_FOCUS' | translate }}
               </p>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center mb-3">
-          <div class="about-card card w-100 border-black">
+          <div class="about-card card w-100 border-white">
             <div class="card-body text-center">
               <i class="fa fa-laptop-code fa-2x icon"></i>
               <h3 class="fw-bold about-subtitle">{{'SPECIALIZATION' | translate}}</h3>
               <p class="card-text">
-                Web Development<br>Microservices Architecture<br>Relational Databases<br>Blockchain & Fintech Industries
+                {{ 'SKILLS_WEB_DEV' | translate }}<br>
+                {{ 'SKILLS_MVC' | translate }}<br>
+                {{ 'SKILLS_MICROSERVICES' | translate }}<br>
+                {{ 'SKILLS_DATABASES' | translate }}
               </p>
             </div>
           </div>
         </div>
       </div>
       <div class="w-100 text-center mt-3">
-        <p>
-          I'm RM, a backend developer based in Tallinn with over 3 years of diverse experience.
-          I specialize in crafting robust Java-based solutions with Spring and Spring Boot,
-          aligning technical objectives with user needs, and exploring new and exciting technologies like Angular and React.
-          My passion lies in tackling diverse challenges in the dynamic tech landscape,
-          drawing from my international experiences to thrive in collaborative environments.
-        </p>
+        <p>{{ 'ABOUT_ME_DESCRIPTION' | translate }}</p>
       </div>
     </div>
   </div>

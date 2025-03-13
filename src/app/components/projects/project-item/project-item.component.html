@@ -3,20 +3,30 @@
   <div class="card-body">
     <h5 class="card-title mt-3">
       {{ project.name }}
-    </h5>
-    <p class="card-text">{{ project.description }}</p>
+    </h5> 
+    <p class="card-text gc">{{ project.description | translate }}</p>
     <div>
-      <span class="fw-bold">Technologies used:</span>
+      <span class="fw-bold">{{ 'TECNOLOGIES_USED' | translate }}</span>
       <ul class="technologies-list">
         @for (technology of project.technologies; track technology) {
-          <li>{{ technology }}</li>
+          <li class="gc">{{ technology }}</li>
         }
       </ul>
     </div>
-    <div>
+
+    <div class="d-flex align-items-center justify-content-center gap-3">
+    <div *ngIf="project.link">
       <a [href]="project.link" target="_blank" class="bt btn btn-color-3">
-        Check on Github
+        {{ 'CHECK_GITHUB' | translate }}
       </a>
     </div>
+
+    <div *ngIf="project.link && project.ischeckable">
+      <a [href]="project.appUrl" target="_blank" class="bt btn btn-color-3 blue-linkedin">
+        {{ 'GIVE_TRY' | translate }}
+      </a>
+    </div>
+  </div>
+
   </div>
 </div>

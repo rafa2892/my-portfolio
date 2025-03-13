@@ -75,3 +75,18 @@
   margin-top: 1.2rem !important;
   width: 15rem !important; // Override the default width of the button
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0) invert(1); 
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  transform: scale(1.2); 
+  transition: transform 0.3s ease; 
+}
+
+.gc {
+  color: gray !important;
+}
