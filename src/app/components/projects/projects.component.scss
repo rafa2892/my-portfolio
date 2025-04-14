@@ -90,3 +90,32 @@
 .gc {
   color: gray !important;
 }
+
+.card-text {
+  color: whitesmoke !important;
+}
+
+/* Contenedor para el texto que aparece al hacer hover */
+.position-relative {
+  position: relative;
+}
+
+.hover-info {
+  position: absolute;
+  top: 0;
+  right: -180px;  /* Ajusta este valor según sea necesario */
+  background-color: #0077b5;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Muestra la información al hacer hover en el botón */
+.position-relative:hover .hover-info {
+  display: block;
+}
+

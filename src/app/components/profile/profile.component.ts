@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { PortfolioServiceService } from '../services/portfolio-service.service';
 import { HttpClientModule } from '@angular/common/http';
-import { TranslateModule, TranslateService, TranslateStore } from '@ngx-translate/core';
+import { TranslateModule} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
   imports: [
     TranslateModule, 
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
     ],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
@@ -25,11 +26,13 @@ export class ProfileComponent {
     this.viewportScroller.scrollToAnchor(section);
   }
 
-  downloadResume() {
+  downloadResume(language: 'es' | 'en'): void {
+    const fileName = language === 'es' ? 'cv-2025_es.docx' : 'cv-2025_en.docx';
+    const fileUrl = `assets/cv/${fileName}`;
     const link = document.createElement('a');
-    link.href = './assets/cv-2025.docx';  // Ruta del archivo .docx
-    link.download = 'cv-2025.docx';  // Nombre del archivo cuando se descargue
-    link.click();  // Simula el clic en el enlace
+    link.href = fileUrl;  
+    link.download = fileName;
+    link.click();  
   }
 
   goToLinkedin() {
@@ -46,5 +49,11 @@ export class ProfileComponent {
       error: (error) => console.error('Error en la conexión:', error)
     });
   }
+
+  showDownloadOptions = false;
+
+toggleDownloadOptions(): void {
+  this.showDownloadOptions = !this.showDownloadOptions;
+}
 
 }

@@ -1,32 +1,32 @@
 <div class="card text-center">
   <img [src]="project.src" class="card-img-top" [alt]="project.name">
-  <div class="card-body">
-    <h5 class="card-title mt-3">
+  <div class="card-body" style="background-color: rgb(47, 47, 47);">
+    <h5 class="card-title mt-3 text-white">
       {{ project.name }}
     </h5> 
     <p class="card-text gc">{{ project.description | translate }}</p>
     <div>
-      <span class="fw-bold">{{ 'TECNOLOGIES_USED' | translate }}</span>
-      <ul class="technologies-list">
+      <span class="fw-bold text-white">{{ 'TECNOLOGIES_USED' | translate }}</span>
+      <ul class="technologies-list ">
         @for (technology of project.technologies; track technology) {
-          <li class="gc">{{ technology }}</li>
+          <li class="gc technologies-font">{{ technology }}</li>
         }
       </ul>
     </div>
-
     <div class="d-flex align-items-center justify-content-center gap-3">
-    <div *ngIf="project.link">
-      <a [href]="project.link" target="_blank" class="bt btn btn-color-3">
-        {{ 'CHECK_GITHUB' | translate }}
-      </a>
+      <div *ngIf="project.link">
+        <a [href]="project.link" target="_blank" class="bt btn btn-color-3">
+          {{ 'CHECK_GITHUB' | translate }}
+        </a>
+      </div>
+      <div *ngIf="project.link && project.isCheckable" class="position-relative">
+        <a [href]="project.appUrl" target="_blank" class="bt btn btn-color-3 blue-linkedin">
+          {{ 'GIVE_TRY' | translate }}
+        </a>
+        <div *ngIf="project.hasCredentials" class="hover-info">
+          <p><strong> {{ 'USER' | translate }}</strong> admin</p>
+          <p><strong>  {{ 'PASSWORD' | translate }}</strong> admin</p>
+        </div>
     </div>
-
-    <div *ngIf="project.link && project.isCheckable">
-      <a [href]="project.appUrl" target="_blank" class="bt btn btn-color-3 blue-linkedin">
-        {{ 'GIVE_TRY' | translate }}
-      </a>
-    </div>
-  </div>
-
   </div>
 </div>

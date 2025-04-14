@@ -1,5 +1,7 @@
   {
     "DOWNLOAD_CV":"Descargar CV",
+    "DOWNLOAD_LANGUAGE_SPANISH_VERSION":"Español",
+    "DOWNLOAD_LANGUAGE_ENGLISH_VERSION":"Inglés",
     "LANG_EN":"Ingles",
     "LANG_ES":"Español",
     "GREETINGS":"Hola, soy",
@@ -49,7 +51,11 @@
 
     "TECNOLOGIES_USED": "Tecnologías usadas",
     "GIVE_TRY":"¡Pruéba!",
-    "CHECK_GITHUB":"Ver en Github"
+    "CHECK_GITHUB":"Ver en Github",
+
+    
+    "USER":"Usuario:",
+    "PASSWORD":"Contraseña:"
     
 
   }

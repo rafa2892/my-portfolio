@@ -34,6 +34,8 @@ export class ExperienceComponent {
     {name: "Docker", src: "./assets/technologies/docker.png"},
     {name: "GIT", src: "./assets/technologies/git.png"},
     {name: "Postman", src: "./assets/technologies/postman.png"},
+    {name: "Dbeaver", src: "./assets/technologies/dbeaver.jpg"},
+    {name: "JWT", src: "./assets/technologies/jwt.png"},
   ];
 
   // needed to create an infinite-like scroll effect

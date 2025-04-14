@@ -11,6 +11,7 @@ export interface Project {
   link: string;
   isCheckable:boolean;
   appUrl:string;
+  hasCredentials:boolean;
 }
 
 @Component({
@@ -36,6 +37,7 @@ export class ProjectsComponent {
       link: '',
       isCheckable: false,
       appUrl:'',
+      hasCredentials: false
     },
     {
       name: 'Madrid digital',
@@ -45,6 +47,7 @@ export class ProjectsComponent {
       link: '',
       isCheckable: false,
       appUrl:'',
+      hasCredentials: false
     },
     {
       name: 'Transport Bus app',
@@ -54,24 +57,27 @@ export class ProjectsComponent {
       link: 'https://github.com/rafa2892/bus-app-front-deploy-version',
       isCheckable: true,
       appUrl:'https://bus-app-front-6b508bec4929.herokuapp.com',
+      hasCredentials: true
     },
     {
       name: 'My Portfolio',
       description: 'Feel free to check out the code for my portfolio on Github. It\'s open for exploration, and you\'re welcome to fork it and create your own version!',
       technologies: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Bootstrap'],
       src: './assets/projects/portfolio.jpg',
-      link: 'https://github.com/SebastianoFazzino/my-portfolio',
+      link: 'https://github.com/rafa2892/my-portfolio',
       isCheckable: true,
       appUrl:'https://mi-portfolio-3492a933c6d9.herokuapp.com',
+      hasCredentials: false
     },
     {
       name: 'Approved Multi-threading Technician Test',
       description: 'PROJECTS_DESC.MULTICORE_DESC',
       technologies: ['Java 17','Java', 'Spring Boot', 'Postman'],
       src: './assets/projects/multi_core.png',
-      link: 'https://github.com/SebastianoFazzino/banking-app',
+      link: 'https://github.com/rafa2892/concurrent-app-test',
       isCheckable: false,
       appUrl:'',
+      hasCredentials: false
     },
   ];
 }

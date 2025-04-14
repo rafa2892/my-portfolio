@@ -1,5 +1,7 @@
 {
     "DOWNLOAD_CV":"Download CV",
+    "DOWNLOAD_LANGUAGE_SPANISH_VERSION":"Spanish",
+    "DOWNLOAD_LANGUAGE_ENGLISH_VERSION":"English",
     "LANG_EN":"English",
     "LANG_ES":"Spanish",
     "GREETINGS":"Hello, I'm",
@@ -41,7 +43,7 @@
     ,
 
     "PROJECTS_DESC": {
-    "SEPE_DESC": "I was part of the development team at the autonomous organization SEPE, helping create an application from scratch, based on the defined architecture. The app is designed to assess the impact of the measures implemented for gender mainstreaming.",
+    "SEPE_DESC": "As part of the development team at SEPE, I helped build an application from the ground up, following the established architecture. This application is designed to evaluate the impact of measures aimed at promoting gender mainstreaming.",
     "MADRID_DIGITAL_DESC": "As part of the development team for Madrid Digital, my responsibilities included tasks such as migrating applications from JSF Core to PrimeFaces, developing batch processes with Spring Batch, creating APIs, as well as managing deployments through Jenkins (CI/CD). Additionally, I participated in the maintenance and optimization of applications based on a microservices architecture containerized with Docker, among other tasks.",
     "TRANSPORT_BUS_DESC": "Web application for managing a transportation system that records the services performed by units and handles vehicle maintenance, among other functions. It facilitates efficient system administration, ensuring optimal control of resources and services.",
     "PORTFOLIO_DESC": "Feel free to check out the code for my portfolio on GitHub. It's open for exploration, and you're welcome to fork it and create your own version!",
@@ -50,7 +52,10 @@
 
     "TECNOLOGIES_USED": "Technologies used",
     "GIVE_TRY":"Give it a try!",
-    "CHECK_GITHUB":"Check on Github"
+    "CHECK_GITHUB":"Check on Github",
+
+    "USER":"User:",
+    "PASSWORD":"Password:"
   
 
 

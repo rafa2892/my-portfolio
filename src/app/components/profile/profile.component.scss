@@ -11,3 +11,41 @@
 .linkedin-icon {
   font-size: 0.7em;
 }
+
+.dropdown-hover {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-options {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  min-width: 150px;
+}
+
+.dropdown-item {
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-hover:hover .dropdown-options {
+  display: flex;
+}
+
