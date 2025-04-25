@@ -66,7 +66,7 @@ export class ProjectsComponent {
       src: './assets/projects/portfolio.jpg',
       link: 'https://github.com/rafa2892/my-portfolio',
       isCheckable: true,
-      appUrl:'https://mi-portfolio-3492a933c6d9.herokuapp.com',
+      appUrl:'https://mi-portfolio-2025-afb424f0ec8d.herokuapp.com/',
       hasCredentials: false
     },
     {
