@@ -27,7 +27,7 @@ export class ProfileComponent {
   }
 
   downloadResume(language: 'es' | 'en'): void {
-    const fileName = language === 'es' ? 'cv-2025_es.docx' : 'cv-2025_en.docx';
+    const fileName = language === 'es' ? 'cv-2025_es.pdf' : 'cv-2025_en.pdf';
     const fileUrl = `assets/cv/${fileName}`;
     const link = document.createElement('a');
     link.href = fileUrl;  

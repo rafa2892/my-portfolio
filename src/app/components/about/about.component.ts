@@ -11,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class AboutComponent {
 
   getExperienceYears(): number {
-    const startDate = new Date(2022, 3); // April 2021
+    const startDate = new Date(2022, 3); 
     const currentDate = new Date();
     const years = currentDate.getFullYear() - startDate.getFullYear();
     const m = currentDate.getMonth() - startDate.getMonth();
