@@ -54,7 +54,7 @@ export class ProjectsComponent {
       description: 'PROJECTS_DESC.TRANSPORT_BUS_DESC',
       technologies: ["Java 17", "Spring boot", 'Angular', 'TypeScript','Bootstrap 5', 'JWT', 'Google API places', 'MySQL'],
       src: './assets/projects/bus_app_img.png',
-      link: 'https://github.com/rafa2892/bus-app-front-deploy-version',
+      link: '',
       isCheckable: true,
       appUrl:'https://bus-app-front-6b508bec4929.herokuapp.com',
       hasCredentials: true

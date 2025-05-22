@@ -19,7 +19,7 @@
           {{ 'CHECK_GITHUB' | translate }}
         </a>
       </div>
-      <div *ngIf="project.link && project.isCheckable" class="position-relative">
+      <div *ngIf="project.isCheckable" class="position-relative">
         <a [href]="project.appUrl" target="_blank" class="bt btn btn-color-3 blue-linkedin">
           {{ 'GIVE_TRY' | translate }}
         </a>
